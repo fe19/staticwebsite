@@ -6,6 +6,13 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+    var text = "Hello"
+    var isClicked = false
+
+    if (count > 0) {
+        text = "Bye"
+        isClicked = true
+    }
 
   return (
     <>
@@ -22,7 +29,12 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           Click on me
         </button>
-              <img src={catLogo} className="logo cat" alt="Cat logo" />
+          {isClicked ? 
+              <div>
+                  <img src={catLogo} className="logo cat" alt="Cat logo"/>
+              </div> 
+              : ''
+          }
       </div>
     </>
   )
