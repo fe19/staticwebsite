@@ -29,13 +29,13 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           Click on me
         </button>
-          {isClicked ? 
-              <div>
-                  <img src={catLogo} className="logo cat" alt="Cat logo"/>
-              </div> 
-              : ''
-          }
       </div>
+        {isClicked ?
+            <div>
+                <img src={catLogo} alt="Logo" />
+            </div>
+            : ''
+        }
     </>
   )
 }
